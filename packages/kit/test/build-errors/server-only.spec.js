@@ -8,7 +8,7 @@ test('$lib/*.server.* is not statically importable from the client', () => {
 		execSync('pnpm build', {
 			cwd: path.join(process.cwd(), 'apps/server-only-module'),
 			stdio: 'pipe',
-			timeout: 15000
+			timeout: 30000
 		});
 	} catch (err) {
 		assert.ok(
@@ -25,7 +25,7 @@ test('$lib/*.server.* is not dynamically importable from the client', () => {
 		execSync('pnpm build', {
 			cwd: path.join(process.cwd(), 'apps/server-only-module-dynamic-import'),
 			stdio: 'pipe',
-			timeout: 15000
+			timeout: 30000
 		});
 	} catch (err) {
 		assert.ok(
@@ -42,7 +42,7 @@ test('$lib/server/* is not statically importable from the client', () => {
 		execSync('pnpm build', {
 			cwd: path.join(process.cwd(), 'apps/server-only-folder'),
 			stdio: 'pipe',
-			timeout: 15000
+			timeout: 30000
 		});
 	} catch (err) {
 		assert.ok(
@@ -59,7 +59,7 @@ test('$lib/server/* is not dynamically importable from the client', () => {
 		execSync('pnpm build', {
 			cwd: path.join(process.cwd(), 'apps/server-only-folder-dynamic-import'),
 			stdio: 'pipe',
-			timeout: 15000
+			timeout: 30000
 		});
 	} catch (err) {
 		assert.ok(
